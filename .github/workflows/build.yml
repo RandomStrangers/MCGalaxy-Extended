@@ -42,6 +42,7 @@ jobs:
         with:
           DESTINATION_URL: '${{ secrets.NOTIFY_URL }}'
           WORKFLOW_NAME: 'net20'
+          NOTIFY_MESSAGE: 'Successfully compiled MCGalaxy .NET 2.0 build'
    
    
 #============================================
@@ -58,7 +59,7 @@ jobs:
           msbuild MCGalaxy.sln /p:Configuration=Release
           cp -R bin/Release bin/Release_normal
           rm bin/Release/MCGalaxy_.dll bin/Release/MCGalaxy_.pdb
-          msbuild MCGalaxy/MCGalaxy_.csproj /p:Configuration=Release /t:Rebuild /p:DefineConstants="TEN_BIT_BLOCKS,TESTING_BLOCKS"
+          msbuild MCGalaxy/MCGalaxy_.csproj /p:Configuration=Release /t:Rebuild /p:DefineConstants="TEN_BIT_BLOCKS, TESTING_BLOCKS"
 
       - uses: ./.github/actions/notify_failure
         if: ${{ always() && steps.compile.outcome == 'failure' }}
@@ -83,7 +84,14 @@ jobs:
         with:
           DESTINATION_URL: '${{ secrets.NOTIFY_URL }}'
           WORKFLOW_NAME: 'net40'
-          
+          NOTIFY_MESSAGE: 'Successfully compiled MCGalaxy .NET build'
+
+      - uses: ./.github/actions/notify_success
+        if: ${{ always() && steps.compile.outcome == 'success' }}
+        with:
+          DESTINATION_URL: '${{ secrets.NOTIFY_URL }}'
+          WORKFLOW_NAME: 'net40'
+          NOTIFY_MESSAGE: 'Successfully compiled MCGalaxy .NET extended build'
 
 #============================================
 # ============== .NET 6.0 BUILD =============
@@ -152,6 +160,8 @@ jobs:
         with:
           DESTINATION_URL: '${{ secrets.NOTIFY_URL }}'
           WORKFLOW_NAME: 'net60'
+          NOTIFY_MESSAGE: 'Successfully compiled MCGalaxy dotnet 6.0 build'
+
           
 
 #============================================
@@ -191,3 +201,4 @@ jobs:
         with:
           DESTINATION_URL: '${{ secrets.NOTIFY_URL }}'
           WORKFLOW_NAME: 'net80'
+          NOTIFY_MESSAGE: 'Successfully compiled MCGalaxy dotnet 8.0 build'
