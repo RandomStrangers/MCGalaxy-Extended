@@ -70,29 +70,29 @@ namespace MCGalaxy.Network
         }
         
         void SendLevel() {
-            byte[] bulk = null, normal = null, classic = null, ext = null, extBulk = null;
+            ushort[] bulk = null, normal = null, classic = null, ext = null, extBulk = null;
             Player[] players = PlayerInfo.Online.Items;
             foreach (Player p in players) 
             {
                 if (p.level != level) continue;
-                
-                byte[] packet = MakePacket(p, ref bulk, ref normal,
+
+                ushort[] packet = MakePacket(p, ref bulk, ref normal,
                                            ref classic, ref ext, ref extBulk);
                 p.Socket.Send(packet, SendFlags.LowPriority);
             }
         }
         
         void SendPlayer() {
-            byte[] bulk = null, normal = null,classic = null, ext = null, extBulk = null;
-            byte[] packet = MakePacket(player, ref bulk, ref normal,
+            ushort[] bulk = null, normal = null,classic = null, ext = null, extBulk = null;
+            ushort[] packet = MakePacket(player, ref bulk, ref normal,
                                        ref classic, ref ext, ref extBulk);
             player.Socket.Send(packet, SendFlags.LowPriority);
         }
-        
+
         #region Packet construction
-        
-        byte[] MakePacket(Player p, ref byte[] bulk, ref byte[] normal,
-                          ref byte[] classic, ref byte[] ext, ref byte[] extBulk) {
+
+        ushort[] MakePacket(Player p, ref ushort[] bulk, ref ushort[] normal,
+                          ref ushort[] classic, ref ushort[] ext, ref ushort[] extBulk) {
             IGameSession s = p.Session;
             #if TEN_BIT_BLOCKS
             if (s.hasExtBlocks) {
@@ -126,8 +126,8 @@ namespace MCGalaxy.Network
         }
 
         #if TEN_BIT_BLOCKS
-        byte[] MakeBulkExt() {
-            byte[] data = new byte[2 + 256 * 5 + (256 / 4)];
+        ushort[] MakeBulkExt() {
+            ushort[] data = new ushort[2 + 256 * 5 + (256 / 4)];
             data[0] = Opcode.CpeBulkBlockUpdate;
             data[1] = (byte)(count - 1);
             
@@ -153,9 +153,9 @@ namespace MCGalaxy.Network
             }
             return data;
         }
-        
-        byte[] MakeExt() {
-            byte[] data = new byte[count * 9];
+
+        ushort[] MakeExt() {
+            ushort[] data = new ushort[count * 9];
             for (int i = 0, j = 0; i < count; i++) 
             {
                 int index = indices[i];
@@ -176,8 +176,8 @@ namespace MCGalaxy.Network
         #endif
 
 
-        internal byte[] MakeBulk() {
-            byte[] data = new byte[2 + 256 * 5];
+        internal ushort[] MakeBulk() {
+            ushort[] data = new ushort[2 + 256 * 5];
             data[0] = Opcode.CpeBulkBlockUpdate;
             data[1] = (byte)(count - 1);
             for (int i = 0, j = 2; i < count; i++) 
@@ -188,7 +188,10 @@ namespace MCGalaxy.Network
             }
             for (int i = 0, j = 2 + 256 * sizeof(int); i < count; i++) 
             {
-                #if TEN_BIT_BLOCKS
+                #if TESTING_BLOCKS
+                BlockID block = blocks[i];
+                data[j++] = block <= 767 ? (BlockRaw)block : level.GetFallback(block);
+                #elif TEN_BIT_BLOCKS
                 BlockID block = blocks[i];
                 data[j++] = block <= 511 ? (BlockRaw)block : level.GetFallback(block);
                 #else
@@ -198,8 +201,8 @@ namespace MCGalaxy.Network
             return data;
         }
         
-        internal byte[] MakeNormal() {
-            byte[] data = new byte[count * 8];
+        internal ushort[] MakeNormal() {
+            ushort[] data = new ushort[count * 8];
             for (int i = 0, j = 0; i < count; i++) 
             {
                 int index = indices[i];
@@ -211,7 +214,10 @@ namespace MCGalaxy.Network
                 data[j++] = (byte)(x >> 8); data[j++] = (byte)x;
                 data[j++] = (byte)(y >> 8); data[j++] = (byte)y;
                 data[j++] = (byte)(z >> 8); data[j++] = (byte)z;
-                #if TEN_BIT_BLOCKS
+                #if TESTING_BLOCKS
+                BlockID block = blocks[i];
+                data[j++] = block <= 767 ? (ushort)block : level.GetFallback(block);
+                #elif TEN_BIT_BLOCKS
                 BlockID block = blocks[i];
                 data[j++] = block <= 511 ? (BlockRaw)block : level.GetFallback(block);
                 #else
@@ -221,8 +227,8 @@ namespace MCGalaxy.Network
             return data;
         }
 
-        internal byte[] MakeLimited(byte[] fallback) {
-            byte[] data = new byte[count * 8];
+        internal ushort[] MakeLimited(ushort[] fallback) {
+            ushort[] data = new ushort[count * 8];
             for (int i = 0, j = 0; i < count; i++) 
             {
                 int index = indices[i];

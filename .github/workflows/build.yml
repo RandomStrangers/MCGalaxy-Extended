@@ -58,7 +58,7 @@ jobs:
           msbuild MCGalaxy.sln /p:Configuration=Release
           cp -R bin/Release bin/Release_normal
           rm bin/Release/MCGalaxy_.dll bin/Release/MCGalaxy_.pdb
-          msbuild MCGalaxy/MCGalaxy_.csproj /p:Configuration=Release /t:Rebuild /p:DefineConstants="TEN_BIT_BLOCKS"
+          msbuild MCGalaxy/MCGalaxy_.csproj /p:Configuration=Release /t:Rebuild /p:DefineConstants="TEN_BIT_BLOCKS,TESTING_BLOCKS"
 
       - uses: ./.github/actions/notify_failure
         if: ${{ always() && steps.compile.outcome == 'failure' }}
@@ -76,7 +76,7 @@ jobs:
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
           SOURCE_FILE: 'bin/Release'
-          DEST_NAME: 'MCGalaxy-net40-infid'
+          DEST_NAME: 'MCGalaxy-net40-extended'
           
       - uses: ./.github/actions/notify_success
         if: ${{ always() && steps.compile.outcome == 'success' }}

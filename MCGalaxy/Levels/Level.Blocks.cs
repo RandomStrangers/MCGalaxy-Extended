@@ -471,7 +471,7 @@ namespace MCGalaxy {
         
         public byte CollideType(BlockID block) {
             BlockDefinition def = GetBlockDef(block);
-            byte collide = def != null ? def.CollideType : MCGalaxy.Blocks.CollideType.Solid;
+            byte collide = def != null ? def.CollideType : Blocks.CollideType.Solid;
             
             if (def == null && block < Block.Extended)
                 return DefaultSet.Collide(Block.Convert(block));

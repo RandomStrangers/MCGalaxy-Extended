@@ -28,7 +28,7 @@ namespace MCGalaxy
         /// <summary> Total number of blocks in Classic + CPE CustomBlocks </summary>
         public const byte CPE_COUNT         = CPE_MAX_BLOCK + 1;
         /// <summary> Total number of blocks in Classic + CPE CustomBlocks + physics blocks </summary>
-        public const int  CORE_COUNT = 256;
+        public const int CORE_COUNT = 256;
 
         // 10 bit block ids are broken down into: 2 bits of class/type, 8 bits value
         // class | value meaning
@@ -45,9 +45,27 @@ namespace MCGalaxy
         //       |    0 to 255 are custom blocks 512 to 767
         //
         // E.g. 0x080 = class 00, value 128 = physics block 128
-        // E.g. 0x180 = class 01, value 128 =  custom block 128
-        
-        #if TEN_BIT_BLOCKS
+#if TESTING_BLOCKS               
+        public const ushort MaxRaw = 1023;
+        internal const int SUPPORTED_COUNT = 1280;
+        internal static ushort[] ExtendedBase = new ushort[CORE_COUNT];
+        internal static byte[] ExtendedClass = new byte[5];
+
+        static Block()
+        {
+            ExtendedBase[custom_block] = Extended;
+            ExtendedBase[custom_block_2] = Extended * 2;
+            ExtendedBase[custom_block_3] = Extended * 3;
+            ExtendedBase[custom_block_4] = Extended * 4;
+
+            ExtendedClass[0] = Air;
+            ExtendedClass[1] = custom_block;
+            ExtendedClass[2] = custom_block_2;
+            ExtendedClass[3] = custom_block_3;
+            ExtendedClass[4] = custom_block_4;
+
+        }
+#elif TEN_BIT_BLOCKS
         public const ushort MaxRaw = 767;
         internal const int SUPPORTED_COUNT = 256 * 4;
         internal static ushort[] ExtendedBase = new ushort[CORE_COUNT];
@@ -303,13 +321,20 @@ namespace MCGalaxy
         // Special liquid blocks
         public const byte Magma = 195;
         public const byte Geyser = 196;
-        
+
         public const byte Checkpoint = 197;
-        #if TEN_BIT_BLOCKS
+        #if TESTING_BLOCKS
         public const byte custom_block_2 = 198;
         public const byte custom_block_3 = 199;
+        public const byte custom_block_4 = 218;
+        #elif TEN_BIT_BLOCKS
+        public const byte custom_block_2 = 198;
+        public const byte custom_block_3 = 199;
+        #else
         #endif
-        
+
+        public const ushort Extended = 256;
+
         // Air type blocks
         public const byte Air_Flood = 200;
         public const byte Door_Log_air = 201;
@@ -373,9 +398,8 @@ namespace MCGalaxy
         public const byte Door_Gold = 253;
         //public const byte Door_Gold_air = 254;       // unused in core
         
-        public const byte Invalid = 0xff;
+        public const byte Invalid = 255;
         
-        public const ushort Extended = 256;
         public const int ExtendedShift = 8;
     }
 }

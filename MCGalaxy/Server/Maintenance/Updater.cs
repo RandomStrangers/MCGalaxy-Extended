@@ -43,9 +43,12 @@ namespace MCGalaxy
 #else
         const string CDN_BASE = CDN_URL + "net40/";
 #endif
-        
+
 #if MCG_STANDALONE
         static string DLL_URL = CDN_URL  + IOperatingSystem.DetectOS().StandaloneName;
+#elif TESTING_BLOCKS
+        const string DLL_URL = "https://github.com/RandomStrangers/" +
+            "MCGalaxy-Extended/raw/master/Uploads/MCGalaxy_Extended.dll";
 #elif TEN_BIT_BLOCKS
         const string DLL_URL  = CDN_BASE + "MCGalaxy_infid.dll";
 #else
@@ -95,10 +98,14 @@ namespace MCGalaxy
                 }
         		
                 string mode = release ? "release" : "latest";
-                Logger.Log(LogType.SystemActivity, "Downloading {0} update files", mode);               
                 WebClient client = HttpUtil.CreateWebClient();
-                
+#if TESTING_BLOCKS
+                Logger.Log(LogType.SystemActivity, "Downloading extended update files");
+                DownloadFile(client, DLL_URL, "MCGalaxy_.update");
+#else
+                Logger.Log(LogType.SystemActivity, "Downloading {0} update files", mode);               
                 DownloadFile(client, DLL_URL.Replace("{0}", mode), "MCGalaxy_.update");
+#endif
 #if MCG_STANDALONE
                 // Self contained executable, no separate CLI or GUI to download
 #elif MCG_DOTNET

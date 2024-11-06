@@ -76,12 +76,24 @@ namespace MCGalaxy
             }
             return extPos ? 12 : 6;
         }
-        
-        public static void WriteBlock(BlockID raw, byte[] array, int index, bool extBlocks) {
-            if (extBlocks) { array[index++] = (byte)(raw >> 8); }
+
+        public static void WriteBlock(BlockID raw, byte[] array, int index, bool extBlocks, bool testBlocks)
+        {
+            if (testBlocks)
+            {
+                array[index++] = (byte)(raw >> 9);
+            }
+            else if (extBlocks && !testBlocks)
+            {
+                array[index++] = (byte)(raw >> 8);
+            }
+
             array[index++] = (byte)raw;
         }
-        
+        public static void WriteBlock(BlockID raw, byte[] array, int index, bool extBlocks)
+        {
+            WriteBlock(raw, array, index, extBlocks, false);
+        }
 
         public unsafe static string ReadString(byte[] data, int offset) {
             int length = 0;

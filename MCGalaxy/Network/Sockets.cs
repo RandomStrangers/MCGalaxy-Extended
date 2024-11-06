@@ -45,6 +45,11 @@ namespace MCGalaxy.Network
         public abstract void Init();        
         /// <summary> Sends a block of data </summary>
         public abstract void Send(byte[] buffer, SendFlags flags);
+        public virtual void Send(ushort[] buffer, SendFlags flags) 
+        { 
+        }
+
+
         /// <summary> Closes this network socket </summary>
         public abstract void Close();
         
@@ -123,10 +128,14 @@ namespace MCGalaxy.Network
     public sealed class TcpSocket : INetSocket 
     {
         readonly Socket socket;        
-        byte[] recvBuffer = new byte[256];
         readonly SocketAsyncEventArgs recvArgs = new SocketAsyncEventArgs();
-        
+        #if TESTING_BLOCKS
+        byte[] recvBuffer = new byte[512];
+        byte[] sendBuffer = new byte[8192];
+        #else
+        byte[] recvBuffer = new byte[256];
         byte[] sendBuffer = new byte[4096];
+        #endif
         readonly object sendLock = new object();
         readonly Queue<byte[]> sendQueue = new Queue<byte[]>(64);
         volatile bool sendInProgress;
@@ -329,7 +338,7 @@ namespace MCGalaxy.Network
     }
     
     // TODO avoid copying so much of TcpSocket
-    #if NET_20  
+#if NET_20
     /// <summary> Backwards compatible socket for older Windows versions where Recv/SendAsync doesn't work </summary>
     public sealed class TcpLegacySocket : INetSocket 
     {
@@ -457,5 +466,5 @@ namespace MCGalaxy.Network
             lock (sendLock) { sendQueue.Clear(); }
         }
     }
-    #endif
+#endif
 }

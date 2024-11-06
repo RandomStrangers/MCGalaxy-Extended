@@ -324,7 +324,21 @@ namespace MCGalaxy.Network
             } else if (ext.Name == CpeExt.LongerMessages) {
                 hasLongerMessages = true;
             }
-            #if TEN_BIT_BLOCKS
+            #if TESTING_BLOCKS
+            else if (ext.Name == CpeExt.ExtBlocks) 
+            {
+                hasExtBlocks = true;
+                if (ext.ClientVersion == 2)
+                {
+                    hasTestBlocks = true;
+                    if (MaxRawBlock < 1023) MaxRawBlock = 1023;
+                }
+                else
+                {
+                    if (MaxRawBlock < 767) MaxRawBlock = 767;
+                }
+            }
+            #elif TEN_BIT_BLOCKS
             else if (ext.Name == CpeExt.ExtBlocks) {
                 hasExtBlocks = true;
                 if (MaxRawBlock < 767) MaxRawBlock = 767;
@@ -659,7 +673,15 @@ namespace MCGalaxy.Network
 
                 
         public override void SendBlockchange(ushort x, ushort y, ushort z, BlockID block) {
-            byte[] buffer = new byte[hasExtBlocks ? 9 : 8];
+            byte[] buffer;
+            if (hasTestBlocks && hasExtBlocks)
+            {
+                buffer = new byte[hasTestBlocks ? 10 : 9];
+            }
+            else
+            {
+                buffer = new byte[hasExtBlocks ? 9 : 8];
+            }
             buffer[0] = Opcode.SetBlock;
             NetUtils.WriteU16(x, buffer, 1);
             NetUtils.WriteU16(y, buffer, 3);
@@ -670,7 +692,7 @@ namespace MCGalaxy.Network
             socket.Send(buffer, SendFlags.LowPriority);
         }
 
-        public override byte[] MakeBulkBlockchange(BufferedBlockSender buffer) {
+        public override ushort[] MakeBulkBlockchange(BufferedBlockSender buffer) {
             return buffer.MakeLimited(fallback);
         }
         

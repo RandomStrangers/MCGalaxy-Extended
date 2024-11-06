@@ -27,13 +27,14 @@ namespace MCGalaxy.Network
     public abstract class IGameSession : INetProtocol
     {
         public byte ProtocolVersion;
-        public byte[] fallback = new byte[256]; // fallback for classic+CPE block IDs
+        public ushort[] fallback = new ushort[256]; // fallback for classic+CPE block IDs
         public BlockID MaxRawBlock = Block.CLASSIC_MAX_BLOCK;
         public bool hasCpe;
         public string appName;
 
         // these are checked very frequently, so avoid overhead of .Supports(
         public bool hasCustomBlocks, hasExtBlocks, hasBlockDefs, hasBulkBlockUpdate;
+        public bool hasTestBlocks;
         protected INetSocket socket;
         protected Player player;
         /// <summary> Temporary unique ID for this network session </summary>
@@ -120,7 +121,7 @@ namespace MCGalaxy.Network
         /// <summary> Sends a block change/update packet to the client </summary>
         public abstract void SendBlockchange(ushort x, ushort y, ushort z, BlockID block);
         
-        public abstract byte[] MakeBulkBlockchange(BufferedBlockSender buffer);
+        public abstract ushort[] MakeBulkBlockchange(BufferedBlockSender buffer);
         /// <summary> Gets the name of the software the client is using </summary>
         /// <example> ClassiCube, Classic 0.0.16, etc </example>
         public abstract string ClientName();
@@ -136,7 +137,8 @@ namespace MCGalaxy.Network
             } else {
                 raw = Block.Convert(block);
                 // show invalid physics blocks as Orange
-                if (raw >= Block.CPE_COUNT) raw = Block.Orange;
+                if (raw >= Block.CPE_COUNT && raw > Block.Extended) 
+                    raw = Block.Orange;
             }
             if (raw > MaxRawBlock) raw = p.level.GetFallback(block);
             
