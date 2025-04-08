@@ -15,14 +15,14 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing;
 using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.Building {
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdPaste : Command2 {
         public override string name { get { return "Paste"; } }
         public override string shortcut { get { return "v"; } }

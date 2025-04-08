@@ -21,19 +21,14 @@
 ////-----|  Note: Double click on // to see |-----\\\\
 ///------|        them in the sidebar!!     |------\\\
 //-------|__________________________________|-------\\
-using System;
-using System.Collections.Generic;
-using MCGalaxy.Blocks.Physics;
 using MCGalaxy.Events.EntityEvents;
 using MCGalaxy.Events.LevelEvents;
 using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;
-using MCGalaxy.Tasks;
-using BlockID = System.UInt16;
 
 namespace MCGalaxy.Modules.Games.TW
-{    
+{
     public partial class TWGame : RoundsGame 
     {    
         protected override void HookEventHandlers() {

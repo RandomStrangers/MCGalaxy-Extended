@@ -12,10 +12,9 @@ BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 or implied. See the Licenses for the specific language governing
 permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 
-namespace MCGalaxy.Commands.Info 
+namespace MCGalaxy.Commands.Info
 {
     public sealed class CmdCommands : Command2 
     {
@@ -66,7 +65,7 @@ namespace MCGalaxy.Commands.Info
         
         static void PrintShortcuts(Player p, string modifier) {
             List<Command> shortcuts = new List<Command>();
-            foreach (Command cmd in Command.allCmds) {
+            foreach (Command cmd in allCmds) {
                 if (cmd.shortcut.Length == 0) continue;
                 if (!p.CanUse(cmd)) continue;
                 shortcuts.Add(cmd);
@@ -79,7 +78,7 @@ namespace MCGalaxy.Commands.Info
         
         static void PrintRankCommands(Player p, string sort, string modifier, Group group, bool own) {
             List<Command> cmds = new List<Command>();
-            foreach (Command c in Command.allCmds) 
+            foreach (Command c in allCmds) 
             {
                 if (c.Permissions.UsableBy(group.Permission)) cmds.Add(c);
             }   
@@ -95,19 +94,19 @@ namespace MCGalaxy.Commands.Info
             
             string type = "Cmds " + group.Name;
             if (sort.Length > 0) type += " " + sort;
-            Paginator.Output(p, cmds, Command.GetColoredName,
+            Paginator.Output(p, cmds, GetColoredName,
                              type, "commands", modifier);
             p.Message("Type &T/Help <command> &Sfor more help on a command.");
         }
         
         static void PrintAllCommands(Player p, string sort, string modifier) {
-            List<Command> cmds = Command.CopyAll();
+            List<Command> cmds = CopyAll();
             SortCommands(cmds, sort);
             p.Message("All commands:");
             
             string type = "Commands all";
             if (sort.Length > 0) type += " " + sort;
-            Paginator.Output(p, cmds, Command.GetColoredName,
+            Paginator.Output(p, cmds, GetColoredName,
                              type, "commands", modifier);            
             p.Message("Type &T/Help <command> &Sfor more help on a command.");
         }
@@ -120,7 +119,7 @@ namespace MCGalaxy.Commands.Info
             type = MapCategory(type);
             if (type.CaselessEq("eco")) type = CommandTypes.Economy;
 
-            foreach (Command c in Command.allCmds) 
+            foreach (Command c in allCmds) 
             {
                 string category = MapCategory(c.type);
                 if (!type.CaselessEq(category)) continue;
@@ -138,7 +137,7 @@ namespace MCGalaxy.Commands.Info
 
             type = "Commands " + type;
             if (sort.Length > 0) type += " " + sort;
-            Paginator.Output(p, cmds, Command.GetColoredName,
+            Paginator.Output(p, cmds, GetColoredName,
                              type, "commands", modifier);
             
             p.Message("Type &T/Help <command> &Sfor more help on a command.");
@@ -172,7 +171,7 @@ namespace MCGalaxy.Commands.Info
         
         internal static string GetCategories() {
             Dictionary<string, bool> categories = new Dictionary<string, bool>();
-            foreach (Command cmd in Command.allCmds)
+            foreach (Command cmd in allCmds)
             {
                 categories[MapCategory(cmd.type)] = true;
             }

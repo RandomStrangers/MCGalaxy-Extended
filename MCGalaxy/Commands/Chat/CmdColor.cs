@@ -16,10 +16,9 @@
     permissions and limitations under the Licenses.
  */
 using MCGalaxy.Bots;
-using MCGalaxy.DB;
 
 namespace MCGalaxy.Commands.Chatting
-{    
+{
     public class CmdColor : EntityPropertyCmd 
     {
         public override string name { get { return "Color"; } }

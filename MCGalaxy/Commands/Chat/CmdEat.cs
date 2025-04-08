@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Eco;
 
-namespace MCGalaxy.Commands.Chatting 
-{  
+namespace MCGalaxy.Commands.Chatting
+{
     public sealed class CmdEat : Command2 
     {
         public override string name { get { return "Eat"; } }

@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MCGalaxy.Bots 
-{    
+namespace MCGalaxy.Bots
+{
     /// <summary> Represents an action that a bot will perform </summary>
     public abstract class BotInstruction 
     {        

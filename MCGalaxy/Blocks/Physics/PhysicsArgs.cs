@@ -15,10 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Runtime.InteropServices;
 
-namespace MCGalaxy.Blocks.Physics {
+namespace MCGalaxy.Blocks.Physics
+{
 
     [StructLayout(LayoutKind.Sequential, Pack = 4)]
     public struct PhysicsArgs {

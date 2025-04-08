@@ -15,9 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-
-namespace MCGalaxy.Network {
+namespace MCGalaxy.Network
+{
 
     /// <summary> List of packet opcode bytes. (Packet identifiers) </summary>
     public static class Opcode {

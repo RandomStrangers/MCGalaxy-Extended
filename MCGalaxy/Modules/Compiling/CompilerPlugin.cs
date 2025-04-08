@@ -16,9 +16,7 @@
     permissions and limitations under the Licenses.
 */
 #if !MCG_STANDALONE
-using System;
-
-namespace MCGalaxy.Modules.Compiling 
+namespace MCGalaxy.Modules.Compiling
 {
     public sealed class CompilerPlugin : Plugin 
     {

@@ -15,13 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Commands;
-using MCGalaxy.Commands.Building;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Drawing.Brushes 
+namespace MCGalaxy.Drawing.Brushes
 {
     public class ReplaceBrushBrushFactory : BrushFactory 
     {
@@ -48,7 +45,7 @@ namespace MCGalaxy.Drawing.Brushes
             if (parts.Length < 2) { p.MessageLines(Help); return null; }
             if (!CommandParser.GetBlockIfAllowed(p, parts[0], "replace", out target)) return null;
             
-            BrushFactory factory = BrushFactory.FindMatch(p, parts[1]);
+            BrushFactory factory = FindMatch(p, parts[1]);
             if (factory == null) return null;
             
             args.Message = parts.Length > 2 ? parts[2] : "";

@@ -16,12 +16,12 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using MCGalaxy.Blocks;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.Building {
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdFill : DrawCmd {
         public override string name { get { return "Fill"; } }
         public override string shortcut { get { return "f"; } }

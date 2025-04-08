@@ -17,10 +17,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
-
-namespace MCGalaxy.Commands.Chatting 
-{    
+namespace MCGalaxy.Commands.Chatting
+{
     public sealed class CmdRankMsg : Command2 
     {        
         public override string name { get { return "RankMsg"; } }

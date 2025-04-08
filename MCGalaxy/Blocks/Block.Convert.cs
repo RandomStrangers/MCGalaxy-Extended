@@ -15,22 +15,20 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
 using MCGalaxy.Blocks;
-using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public static partial class Block 
     {
-        static string[] coreNames = new string[Block.CORE_COUNT];
+        static string[] coreNames = new string[CORE_COUNT];
         public static bool Undefined(BlockID block) { return IsPhysicsType(block) && coreNames[block].CaselessEq("unknown"); }
         
         public static bool ExistsGlobal(BlockID b) { return ExistsFor(Player.Console, b); }
         
         public static bool ExistsFor(Player p, BlockID b) {
-            if (b < Block.CORE_COUNT) return !Undefined(b);
+            if (b < CORE_COUNT) return !Undefined(b);
             
             if (!p.IsSuper) return p.level.GetBlockDef(b) != null;
             return BlockDefinition.GlobalDefs[b] != null;
@@ -57,7 +55,7 @@ namespace MCGalaxy
             BlockID block;
             // raw ID is treated specially, before names
             if (BlockID.TryParse(input, out block)) {
-                if (block < Block.CPE_COUNT || (block <= Block.MaxRaw && defs[FromRaw(block)] != null)) {
+                if (block < CPE_COUNT || (block <= MaxRaw && defs[FromRaw(block)] != null)) {
                     return FromRaw(block);
                 } // TODO redo to use ExistsFor?
             }
@@ -72,7 +70,7 @@ namespace MCGalaxy
         
         public static string GetColoredName(Player p, BlockID block) {
             BlockPerms perms = BlockPerms.GetPlace(block); // TODO check Delete perms too?
-            return Group.GetColor(perms.MinRank) + Block.GetName(p, block);
+            return Group.GetColor(perms.MinRank) + GetName(p, block);
         }
         
         

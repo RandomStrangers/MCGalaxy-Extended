@@ -16,11 +16,10 @@
     permissions and limitations under the Licenses.
  */
 #if !MCG_STANDALONE
-using System;
 using MCGalaxy.Commands;
 using MCGalaxy.Scripting;
 
-namespace MCGalaxy.Modules.Compiling 
+namespace MCGalaxy.Modules.Compiling
 {
     class CmdCompile : Command2 
     {

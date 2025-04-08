@@ -15,11 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy;
 using MCGalaxy.Drawing.Brushes;
 
-namespace MCGalaxy.Commands.Building 
+namespace MCGalaxy.Commands.Building
 {
     public sealed class CmdBrush : Command2 
     {

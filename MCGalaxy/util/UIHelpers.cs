@@ -17,9 +17,8 @@
  */
 using System;
 using System.Threading;
-using MCGalaxy;
 
-namespace MCGalaxy.UI 
+namespace MCGalaxy.UI
 {
     /// <summary> Common functionality for a CLI or GUI server console </summary>
     public static class UIHelpers 

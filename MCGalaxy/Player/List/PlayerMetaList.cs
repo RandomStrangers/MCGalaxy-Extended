@@ -15,12 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MCGalaxy {
-    
+namespace MCGalaxy
+{
+
     /// <summary> Represents a list of metadata about players. (such as rank info, ban info, notes). </summary>
     /// <remarks> Unlike other player lists, this list is NOT kept in memory. </remarks>
     public sealed class PlayerMetaList {

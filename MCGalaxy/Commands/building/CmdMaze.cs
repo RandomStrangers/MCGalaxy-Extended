@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Generator;
 
-namespace MCGalaxy.Commands.Building 
+namespace MCGalaxy.Commands.Building
 {
     public sealed class CmdMaze : DrawCmd 
     {

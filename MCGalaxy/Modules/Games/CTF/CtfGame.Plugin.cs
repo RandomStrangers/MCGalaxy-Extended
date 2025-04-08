@@ -19,13 +19,12 @@
  */
 using System;
 using MCGalaxy.Events.EntityEvents;
-using MCGalaxy.Events.LevelEvents;
 using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Modules.Games.CTF 
+namespace MCGalaxy.Modules.Games.CTF
 {
     public partial class CTFGame : RoundsGame 
     {

@@ -15,11 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.IO;
 using MCGalaxy.Scripting;
 
-namespace MCGalaxy.Commands.Scripting 
+namespace MCGalaxy.Commands.Scripting
 {
     public sealed class CmdPlugin : Command2 
     {

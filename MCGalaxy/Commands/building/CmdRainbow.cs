@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing.Ops;
-using MCGalaxy.Maths;
 
-namespace MCGalaxy.Commands.Building {
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdRainbow : DrawCmd {
         public override string name { get { return "Rainbow"; } }
         public override LevelPermission defaultRank { get { return LevelPermission.AdvBuilder; } }

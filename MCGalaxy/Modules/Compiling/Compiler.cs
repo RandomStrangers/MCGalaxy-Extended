@@ -20,11 +20,10 @@
 #if !MCG_STANDALONE
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Text;
 using MCGalaxy.Scripting;
 
-namespace MCGalaxy.Modules.Compiling 
+namespace MCGalaxy.Modules.Compiling
 {
     /// <summary> Compiles source code files for a particular programming language into a .dll </summary>
     public abstract class ICompiler 

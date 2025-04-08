@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
 
-namespace MCGalaxy.Drawing.Transforms 
+namespace MCGalaxy.Drawing.Transforms
 {
     public abstract class Transform 
     {

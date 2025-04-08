@@ -16,9 +16,9 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Threading;
 
-namespace MCGalaxy.Commands.Misc {
+namespace MCGalaxy.Commands.Misc
+{
     public sealed class CmdSummon : Command2 {
         public override string name { get { return "Summon"; } }
         public override string shortcut { get { return "s"; } }

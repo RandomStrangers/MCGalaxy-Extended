@@ -17,10 +17,9 @@
  */
 using System;
 using System.ComponentModel;
-using MCGalaxy.Commands.World;
-using MCGalaxy.UI;
 
-namespace MCGalaxy.Gui {
+namespace MCGalaxy.Gui
+{
     public sealed class LevelProperties {     
         readonly Level lvl;
         readonly LevelConfig cfg;

@@ -16,10 +16,10 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 
-namespace MCGalaxy.Events.GroupEvents {
-    
+namespace MCGalaxy.Events.GroupEvents
+{
+
     public delegate void GroupLoaded(Group group);
     /// <summary> Raised when a particular group is loaded.</summary>
     public sealed class OnGroupLoadedEvent : IEvent<GroupLoaded> {

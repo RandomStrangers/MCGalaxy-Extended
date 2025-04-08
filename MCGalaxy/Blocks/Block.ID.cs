@@ -15,9 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
-
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public static partial class Block 
     {

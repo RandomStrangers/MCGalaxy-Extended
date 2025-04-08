@@ -15,9 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-
-namespace MCGalaxy.Commands.Info 
+namespace MCGalaxy.Commands.Info
 {
     public sealed class CmdLoaded : Command2 
     {

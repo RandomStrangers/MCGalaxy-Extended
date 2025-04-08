@@ -14,10 +14,10 @@ permissions and limitations under the Licenses.
  */
 using System;
 using MCGalaxy.Authentication;
-using MCGalaxy.Events;
 using MCGalaxy.Network;
 
-namespace MCGalaxy.Core {
+namespace MCGalaxy.Core
+{
     internal static class ConnectingHandler {
         
         internal static void HandleConnecting(Player p, string mppass) {

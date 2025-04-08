@@ -39,7 +39,7 @@ namespace MCGalaxy
         
         public static Position FromFeet(int x, int y, int z) { return new Position(x, y + Entities.CharacterHeight, z); }
         public static Position FromFeetBlockCoords(int bX, int bY, int bZ) {
-            return Position.FromFeet(16 + bX * 32, bY * 32, 16 + bZ * 32);
+            return FromFeet(16 + bX * 32, bY * 32, 16 + bZ * 32);
         }
         
         /// <summary> World/block coordinate of this position. </summary>

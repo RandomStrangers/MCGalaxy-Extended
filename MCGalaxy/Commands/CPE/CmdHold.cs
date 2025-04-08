@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.CPE 
-{    
+namespace MCGalaxy.Commands.CPE
+{
     public sealed class CmdHold : Command2 
     {
         public override string name { get { return "Hold"; } }

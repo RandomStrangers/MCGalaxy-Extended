@@ -72,8 +72,8 @@ namespace MCGalaxy.Games
             StartGame();
             RoundsLeft = rounds;
             Running = true;
-            
-            IGame.RunningGames.Add(this);
+
+            RunningGames.Add(this);
             OnStateChangedEvent.Call(this);
             HookEventHandlers();
             
@@ -125,7 +125,7 @@ namespace MCGalaxy.Games
                 try { End(); }
                 catch (Exception ex2) { Logger.LogError(ex2); }
             }
-            IGame.RunningGames.Remove(this);
+            RunningGames.Remove(this);
         }
         
         protected virtual bool SetMap(string map) {
@@ -250,7 +250,7 @@ namespace MCGalaxy.Games
         public override void End() {
             if (!Running) return;
             Running = false;
-            IGame.RunningGames.Remove(this);
+            RunningGames.Remove(this);
             UnhookEventHandlers();
             
             if (RoundInProgress) {

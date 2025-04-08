@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.IO;
 using MCGalaxy.Events;
 using MCGalaxy.Events.GroupEvents;
 
-namespace MCGalaxy.Commands.Moderation {
+namespace MCGalaxy.Commands.Moderation
+{
     public sealed class CmdSetRank : Command2 {
         public override string name { get { return "SetRank"; } }
         public override string shortcut { get { return "Rank"; } }

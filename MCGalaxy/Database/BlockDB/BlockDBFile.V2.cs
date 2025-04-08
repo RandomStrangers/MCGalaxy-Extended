@@ -23,7 +23,7 @@ namespace MCGalaxy.DB
 {
     public unsafe sealed class BlockDBFile_V2 : BlockDBFile 
     {
-        const int BlockSize = BlockDBFile.BulkEntries;
+        const int BlockSize = BulkEntries;
         
         /* TODO: Last chunk in file may only be partially filled. need to prepend these entries when compressing more. */
         public override void WriteEntries(Stream s, FastList<BlockDBEntry> entries) {
@@ -37,7 +37,7 @@ namespace MCGalaxy.DB
         public override long CountEntries(Stream s) {
             byte[] data = new byte[8];
             s.Position = 16;
-            BlockDBFile.ReadFully(s, data, 0, data.Length);
+            ReadFully(s, data, 0, data.Length);
             
             uint lo = (uint)ReadInt32(data, 0);
             uint hi = (uint)ReadInt32(data, 4);
@@ -53,11 +53,11 @@ namespace MCGalaxy.DB
             
             int bytes = (int)Math.Min(remaining, BlockSize);
             int offset = bulk.Length - BlockSize;
-            
+
             // NOTE: bulk and entriesPtr point to same thing
             // But we read into the end of the bulk array, thus the entriesPtr pointing
             // to start of array never ends up overlapping with the data being read
-            BlockDBFile.ReadFully(s, bulk, offset, bytes);
+            ReadFully(s, bulk, offset, bytes);
             return DecompressChunk(bulk, offset, entriesPtr);
         }
         
@@ -69,7 +69,7 @@ namespace MCGalaxy.DB
                 
                 pos -= bytes;
                 s.Position = pos;
-                BlockDBFile.ReadFully(s, bulk, offset, bytes);
+                ReadFully(s, bulk, offset, bytes);
                 s.Position = pos; // set correct position for next backward read
                 return DecompressChunk(bulk, offset, entriesPtr);
             }

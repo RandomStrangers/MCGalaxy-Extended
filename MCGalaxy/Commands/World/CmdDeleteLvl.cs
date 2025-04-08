@@ -15,9 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-
-namespace MCGalaxy.Commands.World {
+namespace MCGalaxy.Commands.World
+{
     public sealed class CmdDeleteLvl : Command2 {
         public override string name { get { return "DeleteLvl"; } }
         public override string type { get { return CommandTypes.World; } }

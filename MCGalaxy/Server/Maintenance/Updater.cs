@@ -19,10 +19,9 @@ using System;
 using System.IO;
 using System.Net;
 using MCGalaxy.Network;
-using MCGalaxy.Platform;
 using MCGalaxy.Tasks;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     /// <summary> Checks for and applies software updates. </summary>
     public static class Updater 

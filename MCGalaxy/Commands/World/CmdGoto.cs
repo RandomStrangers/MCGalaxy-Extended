@@ -18,9 +18,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCGalaxy.Commands.Info;
 
-namespace MCGalaxy.Commands.World {
+namespace MCGalaxy.Commands.World
+{
     public sealed class CmdGoto : Command2 {
         public override string name { get { return "Goto"; } }
         public override string shortcut { get { return "g"; } }

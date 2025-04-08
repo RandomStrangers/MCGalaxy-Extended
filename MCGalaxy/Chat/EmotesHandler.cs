@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
-namespace MCGalaxy {
-    
+namespace MCGalaxy
+{
+
     public static class EmotesHandler {
         
         /// <summary> Mapping of emote keywords to unicode characters </summary>

@@ -15,16 +15,15 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using MCGalaxy.Blocks;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public static partial class Block 
     {        
-        public static BlockProps[] Props = new BlockProps[Block.SUPPORTED_COUNT];
+        public static BlockProps[] Props = new BlockProps[SUPPORTED_COUNT];
         public static Dictionary<string, byte> Aliases = new Dictionary<string, byte>();
         
         internal static BlockProps MakeDefaultProps(BlockID b) {
@@ -85,10 +84,10 @@ namespace MCGalaxy
             }
             
             // Block specific properties
-            if (b == Block.Slab)            props.StackBlock = DoubleSlab;
-            if (b == Block.CobblestoneSlab) props.StackBlock = Cobblestone;
-            if (b == Block.Dirt)            props.GrassBlock = Block.Grass;
-            if (b == Block.Grass)           props.DirtBlock  = Block.Dirt;
+            if (b == Slab)            props.StackBlock = DoubleSlab;
+            if (b == CobblestoneSlab) props.StackBlock = Cobblestone;
+            if (b == Dirt)            props.GrassBlock = Grass;
+            if (b == Grass)           props.DirtBlock  = Dirt;
             return props;
         }
         
@@ -175,12 +174,12 @@ const string default_names =
     "Blue_Bird@@Killer_Phoenix@@@GoldFish@Sea_Sponge@Shark@" +
     "Salmon@Betta_Fish@Lava_Shark@Snake@Snake_Tail@Door_Gold@@@";
     
-            for (int b = 0; b < Block.CORE_COUNT; b++) {
+            for (int b = 0; b < CORE_COUNT; b++) {
                 int end = default_names.IndexOf('@', start);
                 string name = start == end ? "unknown" : default_names.Substring(start, end - start);
                 start = end + 1;
                 
-                if (b > 0 && b < Block.CPE_COUNT) {
+                if (b > 0 && b < CPE_COUNT) {
                     BlockDefinition def = BlockDefinition.GlobalDefs[b];
                     if (def != null) name = def.Name;
                 }

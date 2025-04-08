@@ -15,10 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 
-namespace MCGalaxy.DB 
+namespace MCGalaxy.DB
 {
     public delegate void OfflineStatPrinter(Player p, PlayerData who);
     

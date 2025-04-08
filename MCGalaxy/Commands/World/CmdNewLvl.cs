@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.Threading;
 using MCGalaxy.Generator;
 
-namespace MCGalaxy.Commands.World {
+namespace MCGalaxy.Commands.World
+{
     public sealed class CmdNewLvl : Command2 {
         public override string name { get { return "NewLvl"; } }
         public override string shortcut { get { return "Gen"; } }

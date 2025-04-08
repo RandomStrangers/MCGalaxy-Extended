@@ -15,9 +15,9 @@ permissions and limitations under the Licenses.
 using System;
 using System.Collections.Generic;
 using MCGalaxy.Events;
-using MCGalaxy.Tasks;
 
-namespace MCGalaxy {
+namespace MCGalaxy
+{
     internal sealed class SpamChecker {
         
         public SpamChecker(Player p) {

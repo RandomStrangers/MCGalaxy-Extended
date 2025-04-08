@@ -15,12 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace MCGalaxy.Gui {
-    
+namespace MCGalaxy.Gui
+{
+
     internal class ColorConverter : StringConverter {
         public override bool GetStandardValuesSupported(ITypeDescriptorContext context) { return true; }
         public override bool GetStandardValuesExclusive(ITypeDescriptorContext context) { return true; }

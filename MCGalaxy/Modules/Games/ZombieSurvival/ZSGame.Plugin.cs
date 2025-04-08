@@ -21,9 +21,7 @@ using MCGalaxy.Blocks;
 using MCGalaxy.Events;
 using MCGalaxy.Events.EconomyEvents;
 using MCGalaxy.Events.EntityEvents;
-using MCGalaxy.Events.LevelEvents;
 using MCGalaxy.Events.PlayerEvents;
-using MCGalaxy.Events.ServerEvents;
 using MCGalaxy.Games;
 using BlockID = System.UInt16;
 

@@ -17,15 +17,13 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.IO;
 using MCGalaxy.Config;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;
 using BlockID = System.UInt16;
 
 namespace MCGalaxy.Modules.Games.CTF
-{    
+{
     public sealed class CTFConfig : RoundsGameConfig 
     {
         public override bool AllowAutoload { get { return false; } }

@@ -15,13 +15,13 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using MCGalaxy.Commands;
 using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy {    
+namespace MCGalaxy
+{
     public sealed class EnvOption {
         public string Name, Help;
         public EnvOptions.OptionSetter SetFunc;

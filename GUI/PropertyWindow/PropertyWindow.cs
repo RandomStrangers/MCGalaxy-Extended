@@ -13,14 +13,11 @@ or implied. See the Licenses for the specific language governing
 permissions and limitations under the Licenses.
  */
 using System;
-using System.Drawing;
 using System.Windows.Forms;
-using MCGalaxy.Commands;
 using MCGalaxy.Eco;
 using MCGalaxy.Events.GameEvents;
-using MCGalaxy.Games;
 
-namespace MCGalaxy.Gui 
+namespace MCGalaxy.Gui
 {
     public partial class PropertyWindow : Form 
     {

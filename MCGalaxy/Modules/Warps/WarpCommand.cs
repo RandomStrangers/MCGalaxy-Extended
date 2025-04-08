@@ -15,8 +15,6 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy.Commands;
 using MCGalaxy.Maths;
 
 namespace MCGalaxy.Modules.Warps

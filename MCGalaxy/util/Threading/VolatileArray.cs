@@ -15,10 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.Collections.Generic;
-
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public sealed class VolatileArray<T> where T : class 
     {
@@ -39,7 +36,7 @@ namespace MCGalaxy
                 T[] newItems = new T[Items.Length + 1];
                 for (int i = 0; i < Items.Length; i++) 
                 {
-                    if (object.ReferenceEquals(Items[i], value)) return false;
+                    if (ReferenceEquals(Items[i], value)) return false;
                     newItems[i] = Items[i];
                 }
 
@@ -53,7 +50,7 @@ namespace MCGalaxy
             lock (locker) {
                 for (int i = 0; i < Items.Length; i++) 
                 {
-                    if (object.ReferenceEquals(Items[i], value)) return true;
+                    if (ReferenceEquals(Items[i], value)) return true;
                 }
             }
             return false;
@@ -67,7 +64,7 @@ namespace MCGalaxy
                 int j = 0;
                 for (int i = 0; i < Items.Length; i++) 
                 {
-                    if (object.ReferenceEquals(Items[i], value)) continue;
+                    if (ReferenceEquals(Items[i], value)) continue;
                     
                     // For some reason item wasn't in the list
                     if (j == newItems.Length) return false;

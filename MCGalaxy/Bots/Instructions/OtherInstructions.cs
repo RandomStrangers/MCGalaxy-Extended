@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.IO;
 
-namespace MCGalaxy.Bots 
-{    
+namespace MCGalaxy.Bots
+{
     /// <summary> Causes the bot to reset to the and execute first instruction. </summary>
     public sealed class ResetInstruction : BotInstruction 
     {

@@ -16,7 +16,6 @@
     permissions and limitations under the Licenses.
  */
 using MCGalaxy.Commands;
-using MCGalaxy.Games;
 
 namespace MCGalaxy.Modules.Games.ZS
 {

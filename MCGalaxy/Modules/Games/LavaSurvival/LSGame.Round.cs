@@ -16,7 +16,6 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;

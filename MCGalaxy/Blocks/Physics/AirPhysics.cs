@@ -15,11 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Blocks.Physics {
-    
+namespace MCGalaxy.Blocks.Physics
+{
+
     public enum AirFlood { Full, Layer, Down, Up, }
     public static class AirPhysics {
         

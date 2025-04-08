@@ -15,10 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Commands.Chatting;
 
-namespace MCGalaxy.Commands.Moderation {
+namespace MCGalaxy.Commands.Moderation
+{
     public sealed class CmdJoker : Command2 {       
         public override string name { get { return "Joker"; } }
         public override string type { get { return CommandTypes.Moderation; } }

@@ -15,7 +15,6 @@ permissions and limitations under the Licenses.
 using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Threading;
 using MCGalaxy.Drawing;
 using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Drawing.Transforms;
@@ -27,8 +26,9 @@ using MCGalaxy.Tasks;
 using MCGalaxy.Undo;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy {
-    
+namespace MCGalaxy
+{
+
     public partial class Player : IDisposable {
 
         public PlayerIgnores Ignores = new PlayerIgnores();
@@ -94,7 +94,7 @@ namespace MCGalaxy {
         /// <summary> Whether this player is a 'Super' player (Console, IRC, etc) </summary>
         public readonly bool IsSuper;
         /// <summary> Whether this player is the console player instance. </summary>
-        public bool IsConsole { get { return this == Player.Console; } }
+        public bool IsConsole { get { return this == Console; } }
         
         public virtual string FullName { get { return color + prefix + DisplayName; } }  
         public string ColoredName { get { return color + DisplayName; } }

@@ -17,12 +17,11 @@
     permissions and limitations under the Licenses.
  */
 using MCGalaxy.DB;
-using MCGalaxy.Network;
 using MCGalaxy.Maths;
 using MCGalaxy.Drawing.Brushes;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Drawing.Ops 
+namespace MCGalaxy.Drawing.Ops
 {
     public sealed class FixGrassDrawOp : CuboidDrawOp 
     {       

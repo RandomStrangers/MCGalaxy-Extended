@@ -30,8 +30,8 @@ namespace MCGalaxy.Commands.Scripting
             if (cmdName.Length == 0) { Help(p); return; }
             
             string cmdArgs = "";
-            Command.Search(ref cmdName, ref cmdArgs);
-            Command cmd = Command.Find(cmdName);
+            Search(ref cmdName, ref cmdArgs);
+            Command cmd = Find(cmdName);
             
             if (cmd == null) {
                 p.Message("\"{0}\" is not a valid or loaded command.", cmdName); return;

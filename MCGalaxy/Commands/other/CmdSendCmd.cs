@@ -34,9 +34,9 @@ namespace MCGalaxy.Commands.Misc {
             
             string cmdName = args[1];
             string cmdArgs = args.Length > 2 ? args[2] : "";
-            Command.Search(ref cmdName, ref cmdArgs);
+            Search(ref cmdName, ref cmdArgs);
             
-            Command cmd = Command.Find(cmdName);
+            Command cmd = Find(cmdName);
             if (cmd == null) {
                 p.Message("Unknown command \"{0}\".", cmdName); return;
             }

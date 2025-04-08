@@ -150,7 +150,7 @@ namespace MCGalaxy
             if (disabled.CaselessContains(plugin.name)) return;
             
             plugin.Load(true);
-            Plugin.core.Add(plugin);
+            core.Add(plugin);
         }
     }
 }

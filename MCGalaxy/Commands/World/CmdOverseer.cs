@@ -15,10 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.Collections.Generic;
-
-namespace MCGalaxy.Commands.World {
+namespace MCGalaxy.Commands.World
+{
     public sealed partial class CmdOverseer : Command2 {
         public override string name { get { return "Overseer"; } }
         public override string shortcut { get { return Overseer.commandShortcut; } }

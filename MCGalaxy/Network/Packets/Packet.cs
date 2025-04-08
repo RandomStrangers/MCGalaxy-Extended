@@ -16,11 +16,10 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using MCGalaxy.Blocks;
 using MCGalaxy.Maths;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Network 
+namespace MCGalaxy.Network
 {
     /// <summary> Constructors for all classic and CPE packets. </summary>
     public static class Packet 

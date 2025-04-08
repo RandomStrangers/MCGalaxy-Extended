@@ -15,10 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Bots;
 
-namespace MCGalaxy.Commands.Bots 
+namespace MCGalaxy.Commands.Bots
 {
     public sealed class CmdBotSet : Command2 
     {

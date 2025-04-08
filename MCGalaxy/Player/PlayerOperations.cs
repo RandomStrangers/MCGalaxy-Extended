@@ -15,10 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.DB;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public static class PlayerOperations 
     {        

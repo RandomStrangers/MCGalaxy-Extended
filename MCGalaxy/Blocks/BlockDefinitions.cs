@@ -17,12 +17,12 @@
  */
 using System;
 using System.IO;
-using MCGalaxy.Blocks;
 using MCGalaxy.Config;
 using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy {
+namespace MCGalaxy
+{
     public sealed class BlockDefinition {
         
         [ConfigUShort("BlockID", null)]

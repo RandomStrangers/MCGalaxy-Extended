@@ -23,7 +23,6 @@ using MCGalaxy.Commands;
 using MCGalaxy.Commands.Chatting;
 using MCGalaxy.DB;
 using MCGalaxy.Events.PlayerEvents;
-using MCGalaxy.Events.ServerEvents;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;
 using MCGalaxy.Network;

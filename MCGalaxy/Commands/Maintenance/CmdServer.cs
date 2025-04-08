@@ -15,14 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Threading;
 using MCGalaxy.DB;
 using MCGalaxy.SQL;
 
-namespace MCGalaxy.Commands.Maintenance {
+namespace MCGalaxy.Commands.Maintenance
+{
     public sealed class CmdServer : Command2 {
         public override string name { get { return "Server"; } }
         public override string shortcut { get { return "Serv"; } }

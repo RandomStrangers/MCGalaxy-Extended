@@ -15,12 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using MCGalaxy.Drawing;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.Building {
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdPalette : Command2 {
         public override string name { get { return "Palette"; } }
         public override string shortcut { get { return "ImgPalette"; } }

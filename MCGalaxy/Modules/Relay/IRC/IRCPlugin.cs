@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Commands;
 using MCGalaxy.Events.ServerEvents;
 
-namespace MCGalaxy.Modules.Relay.IRC 
-{   
+namespace MCGalaxy.Modules.Relay.IRC
+{
     public sealed class IRCPlugin : Plugin 
     {
         public override string name { get { return "IRCRelay"; } }

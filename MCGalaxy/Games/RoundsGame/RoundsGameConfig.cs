@@ -15,17 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.IO;
 using MCGalaxy.Config;
 using MCGalaxy.Events.GameEvents;
-using MCGalaxy.Events.LevelEvents;
-using MCGalaxy.Events.PlayerEvents;
-using MCGalaxy.Events.ServerEvents;
-using MCGalaxy.Network;
 
-namespace MCGalaxy.Games 
+namespace MCGalaxy.Games
 {
     /// <summary> Stores map-specific game configuration state. </summary>
     public abstract class RoundsGameMapConfig 

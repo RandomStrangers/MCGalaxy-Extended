@@ -61,7 +61,7 @@ namespace MCGalaxy
 
         public unsafe static void WriteF32(float value, byte[] buffer, int i) {
             int num = *(int*)&value;
-            NetUtils.WriteI32(num, buffer, i);
+            WriteI32(num, buffer, i);
         }
 
         internal static int WritePos(Position pos, byte[] arr, int offset, bool extPos) {

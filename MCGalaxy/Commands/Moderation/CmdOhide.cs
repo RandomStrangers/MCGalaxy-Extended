@@ -33,8 +33,8 @@ namespace MCGalaxy.Commands.Moderation {
             
             bool own = args.Length >= 2 && args[1].CaselessEq("myrank");
             if (!own) data.Rank = target.Rank;
-            
-            Command.Find("Hide").Use(target, "", data);
+
+            Find("Hide").Use(target, "", data);
             p.Message("Hidden {0} &Sfrom players ranked below {1}",
                       p.FormatNick(target), Group.GetColoredName(data.Rank));
         }

@@ -15,13 +15,13 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
 
-namespace MCGalaxy.Commands.Building {
-    
+namespace MCGalaxy.Commands.Building
+{
+
     public sealed class CmdReplaceAll : Command2 {
         public override string name { get { return "ReplaceAll"; } }
         public override string shortcut { get { return "ra"; } }

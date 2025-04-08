@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy;
 using MCGalaxy.Drawing.Transforms;
 
-namespace MCGalaxy.Commands.Building {  
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdTransform : Command2 {
         public override string name { get { return "Transform"; } }
         public override string type { get { return CommandTypes.Building; } }

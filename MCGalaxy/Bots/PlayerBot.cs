@@ -17,14 +17,13 @@
  */
 using System;
 using System.Collections.Generic;
-using System.IO;
 using MCGalaxy.Bots;
 using MCGalaxy.Maths;
-using MCGalaxy.Network;
 using MCGalaxy.Commands;
 
-namespace MCGalaxy {
-    
+namespace MCGalaxy
+{
+
     public sealed class PlayerBot : Entity {
 
         public bool hunt = false, kill = false;

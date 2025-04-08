@@ -16,8 +16,6 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using MCGalaxy.Blocks.Physics;
-using MCGalaxy.Events;
 using MCGalaxy.Events.EconomyEvents;
 using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Events.LevelEvents;

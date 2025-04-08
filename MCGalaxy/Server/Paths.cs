@@ -15,9 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     /// <summary> Provides a centralised list of files and paths used. </summary>
     public static class Paths 

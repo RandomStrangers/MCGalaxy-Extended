@@ -17,11 +17,10 @@
  */
 using System;
 using System.Collections.Generic;
-using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Generator.fCraft;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Generator.Foliage 
+namespace MCGalaxy.Generator.Foliage
 {
     public delegate void TreeOutput(ushort x, ushort y, ushort z, BlockID block);
     

@@ -15,10 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
-using MCGalaxy.Events.PlayerEvents;
-
-namespace MCGalaxy.Commands.Chatting 
+namespace MCGalaxy.Commands.Chatting
 {
     public sealed class CmdMe : Command2 
     {

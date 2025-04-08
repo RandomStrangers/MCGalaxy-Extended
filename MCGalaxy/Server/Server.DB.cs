@@ -70,7 +70,7 @@ namespace MCGalaxy
             //if Playercmds exists copy-filter to Opstats and remove Playercmds
             if (Database.TableExists("Playercmds")) {
                 const string sql = "INSERT INTO Opstats (Time, Name, Cmd, Cmdmsg) SELECT Time, Name, Cmd, Cmdmsg FROM Playercmds WHERE {0};";
-                foreach (string cmd in Server.Opstats)
+                foreach (string cmd in Opstats)
                     Database.Execute(string.Format(sql, "cmd = '" + cmd + "'"));
                 Database.Execute(string.Format(sql, "cmd = 'review' AND cmdmsg = 'next'"));
                 Database.DeleteTable("Playercmds");

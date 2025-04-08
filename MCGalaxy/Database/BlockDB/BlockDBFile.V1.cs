@@ -55,7 +55,7 @@ namespace MCGalaxy.DB
         }
 
         public override long CountEntries(Stream s) {
-            return (s.Length / BlockDBFile.EntrySize) - BlockDBFile.HeaderEntries;
+            return (s.Length / EntrySize) - HeaderEntries;
         }
         
         // Inlined WriteI32/WriteU16 for better performance
@@ -86,7 +86,7 @@ namespace MCGalaxy.DB
             int count = (int)Math.Min(remaining, BulkEntries);
             
             if (count > 0) {
-                BlockDBFile.ReadFully(s, bulk, 0, count * EntrySize);
+                ReadFully(s, bulk, 0, count * EntrySize);
             }
             return count;
         }
@@ -99,7 +99,7 @@ namespace MCGalaxy.DB
             if (count > 0) {
                 pos -= count * EntrySize;
                 s.Position = pos;
-                BlockDBFile.ReadFully(s, bulk, 0, count * EntrySize);
+                ReadFully(s, bulk, 0, count * EntrySize);
                 s.Position = pos; // set correct position for next backward read
             }
             return count;

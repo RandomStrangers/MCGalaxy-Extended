@@ -19,11 +19,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MCGalaxy.Blocks;
-using MCGalaxy.Commands;
 using MCGalaxy.Config;
 using MCGalaxy.Events.GroupEvents;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     /// <summary> This is the group object, where ranks and their data are stored </summary>
     public sealed class Group

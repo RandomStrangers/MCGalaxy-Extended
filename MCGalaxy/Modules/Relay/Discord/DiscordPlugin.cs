@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.IO;
 using MCGalaxy.Config;
 using MCGalaxy.Events.ServerEvents;
 
-namespace MCGalaxy.Modules.Relay.Discord 
+namespace MCGalaxy.Modules.Relay.Discord
 {
     public sealed class DiscordConfig 
     {

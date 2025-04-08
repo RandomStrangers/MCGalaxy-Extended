@@ -18,10 +18,10 @@
  */
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
-using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.World {
+namespace MCGalaxy.Commands.World
+{
     public sealed class CmdFixGrass : Command2 {
         public override string name { get { return "FixGrass"; } }
         public override string shortcut { get { return "fg"; } }

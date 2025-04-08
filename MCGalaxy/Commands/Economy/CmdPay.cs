@@ -15,11 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Eco;
 using MCGalaxy.Events.EconomyEvents;
 
-namespace MCGalaxy.Commands.Eco {
+namespace MCGalaxy.Commands.Eco
+{
     public sealed class CmdPay : MoneyCmd {
         public override string name { get { return "Pay"; } }
         public override bool MessageBlockRestricted { get { return true; } }

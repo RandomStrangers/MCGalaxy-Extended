@@ -16,11 +16,11 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Blocks.Physics {
-    
+namespace MCGalaxy.Blocks.Physics
+{
+
     public static class FinitePhysics {
         
         public unsafe static void DoWaterOrLava(Level lvl, ref PhysInfo C) {

@@ -14,9 +14,9 @@ permissions and limitations under the Licenses.
 */
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace MCGalaxy {
+namespace MCGalaxy
+{
 
     public static class LineWrapper {
         

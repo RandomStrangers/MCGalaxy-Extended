@@ -15,10 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
 using MCGalaxy.Events.ServerEvents;
 
-namespace MCGalaxy.Modules.Warps 
+namespace MCGalaxy.Modules.Warps
 {
     public sealed class WarpsPlugin : Plugin 
     {

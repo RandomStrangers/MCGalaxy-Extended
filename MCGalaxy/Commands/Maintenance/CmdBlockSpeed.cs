@@ -15,9 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
-
-namespace MCGalaxy.Commands.Maintenance { 
+namespace MCGalaxy.Commands.Maintenance
+{
     public sealed class CmdBlockSpeed : Command2 {        
         public override string name { get { return "BlockSpeed"; } }
         public override string type { get { return CommandTypes.Moderation; } }

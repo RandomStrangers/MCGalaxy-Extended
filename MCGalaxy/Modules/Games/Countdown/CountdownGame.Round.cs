@@ -18,10 +18,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using MCGalaxy.Commands.World;
-using MCGalaxy.Events;
-using MCGalaxy.Events.LevelEvents;
-using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Games;
 using MCGalaxy.Network;
 using BlockID = System.UInt16;

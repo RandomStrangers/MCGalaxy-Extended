@@ -18,11 +18,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Tasks;
 
-namespace MCGalaxy.Commands.Misc {
-    
+namespace MCGalaxy.Commands.Misc
+{
+
     public sealed class CmdHackRank : Command2 {
         public override string name { get { return "HackRank"; } }
         public override string type { get { return CommandTypes.Other; } }

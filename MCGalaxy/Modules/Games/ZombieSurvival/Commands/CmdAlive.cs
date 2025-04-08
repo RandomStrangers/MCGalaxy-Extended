@@ -16,9 +16,8 @@
     permissions and limitations under the Licenses.
 */
 using System.Collections.Generic;
-using MCGalaxy.Games;
 
-namespace MCGalaxy.Modules.Games.ZS 
+namespace MCGalaxy.Modules.Games.ZS
 {
     sealed class CmdAlive : Command2 
     {

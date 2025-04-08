@@ -15,10 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Blocks.Physics {
+namespace MCGalaxy.Blocks.Physics
+{
     public static class DoorPhysics {
         
         public static void Do(Level lvl, ref PhysInfo C) {

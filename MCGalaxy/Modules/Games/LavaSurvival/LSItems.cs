@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Eco;
 
-namespace MCGalaxy.Modules.Games.LS 
-{    
+namespace MCGalaxy.Modules.Games.LS
+{
     sealed class LifeItem : SimpleItem 
     {    
         public LifeItem() {

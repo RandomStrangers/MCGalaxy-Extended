@@ -16,11 +16,9 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
-using MCGalaxy.Games;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Blocks.Physics 
+namespace MCGalaxy.Blocks.Physics
 {
     public delegate bool TNTImmuneFilter(ushort x, ushort y, ushort z);
     

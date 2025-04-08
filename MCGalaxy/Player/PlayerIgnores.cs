@@ -15,12 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MCGalaxy {
-    
+namespace MCGalaxy
+{
+
     public class PlayerIgnores {
         public List<string> Names = new List<string>(), IRCNicks = new List<string>();
         public bool All, IRC, Titles, Nicks, EightBall, DrawOutput, WorldChanges;

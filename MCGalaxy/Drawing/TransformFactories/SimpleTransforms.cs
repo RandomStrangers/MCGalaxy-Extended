@@ -17,9 +17,8 @@
  */
 using System;
 using MCGalaxy.Commands;
-using MCGalaxy.Commands.Building;
 
-namespace MCGalaxy.Drawing.Transforms 
+namespace MCGalaxy.Drawing.Transforms
 {
     public sealed class NoTransformFactory : TransformFactory 
     {

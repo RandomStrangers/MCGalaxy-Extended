@@ -16,10 +16,9 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.IO;
 using MCGalaxy.Events;
 
-namespace MCGalaxy.Commands.Moderation 
+namespace MCGalaxy.Commands.Moderation
 {
     public sealed class CmdMute : Command2 
     {

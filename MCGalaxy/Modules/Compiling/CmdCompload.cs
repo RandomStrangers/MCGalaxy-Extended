@@ -53,8 +53,8 @@ namespace MCGalaxy.Modules.Compiling
         
         static void UnloadCommand(Player p, string cmdName) {
             string cmdArgs = "";
-            Command.Search(ref cmdName, ref cmdArgs);
-            Command cmd = Command.Find(cmdName);
+            Search(ref cmdName, ref cmdArgs);
+            Command cmd = Find(cmdName);
             
             if (cmd == null) return;
             ScriptingOperations.UnloadCommand(p, cmd);

@@ -16,9 +16,9 @@ using System;
 using System.Windows.Forms;
 using MCGalaxy.Modules.Relay.Discord;
 using MCGalaxy.Modules.Relay.IRC;
-using MCGalaxy.SQL;
 
-namespace MCGalaxy.Gui {
+namespace MCGalaxy.Gui
+{
 
     public partial class PropertyWindow : Form { 
         

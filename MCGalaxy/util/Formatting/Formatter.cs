@@ -19,10 +19,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using MCGalaxy.Authentication;
-using MCGalaxy.Blocks;
 using MCGalaxy.Commands;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public static class Formatter 
     { 

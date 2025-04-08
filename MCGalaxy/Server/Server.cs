@@ -16,7 +16,6 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -40,11 +39,11 @@ using MCGalaxy.Tasks;
 using MCGalaxy.Util;
 using MCGalaxy.Modules.Awards;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public sealed partial class Server 
     {
-        public Server() { Server.s = this; }
+        public Server() { s = this; }
         
         //True = cancel event
         //Fale = dont cacnel event
@@ -191,7 +190,7 @@ namespace MCGalaxy
         static readonly object stopLock = new object();
         static volatile Thread stopThread;
         public static Thread Stop(bool restart, string msg) {
-            Server.shuttingDown = true;
+            shuttingDown = true;
             lock (stopLock) {
                 if (stopThread != null) return stopThread;
                 stopThread = new Thread(() => ShutdownThread(restart, msg));
@@ -223,7 +222,7 @@ namespace MCGalaxy
 
             try {
                 string autoload = SaveAllLevels();
-                if (Server.SetupFinished && !Server.Config.AutoLoadMaps) {
+                if (SetupFinished && !Config.AutoLoadMaps) {
                     File.WriteAllText("text/autoload.txt", autoload);
                 }
             } catch (Exception ex) { Logger.LogError(ex); }
@@ -309,7 +308,7 @@ namespace MCGalaxy
         
         public static bool SetMainLevel(string map) {
             OnMainLevelChangingEvent.Call(ref map);
-            string main = mainLevel != null ? mainLevel.name : Server.Config.MainLevel;
+            string main = mainLevel != null ? mainLevel.name : Config.MainLevel;
             if (map.CaselessEq(main)) return false;
             
             Level lvl = LevelInfo.FindExact(map);

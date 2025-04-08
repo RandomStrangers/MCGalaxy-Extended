@@ -15,10 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Network;
 
-namespace MCGalaxy {
+namespace MCGalaxy
+{
     /// <summary> Assistant class for parsing MOTD flags. (-hax, +fly etc) </summary>
     /// <remarks> CanUse methods also check MOTD of zone player is in. </remarks>
     public static class Hacks {

@@ -23,19 +23,12 @@
 //-------|__________________________________|-------\\
 using System;
 using System.Collections.Generic;
-using System.Threading;
 using MCGalaxy.Blocks.Physics;
-using MCGalaxy.Commands.World;
-using MCGalaxy.Events;
-using MCGalaxy.Events.LevelEvents;
-using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;
-using MCGalaxy.Network;
-using BlockID = System.UInt16;
 
 namespace MCGalaxy.Modules.Games.TW
-{    
+{
     public enum TWGameMode { FFA, TDM };
     public enum TWDifficulty 
     {

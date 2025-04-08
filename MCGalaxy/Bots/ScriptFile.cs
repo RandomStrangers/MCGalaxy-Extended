@@ -15,11 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.IO;
 using MCGalaxy.Commands;
 
-namespace MCGalaxy.Bots {
+namespace MCGalaxy.Bots
+{
     public static class ScriptFile {
         
         public static bool Parse(Player p, PlayerBot bot, string ai) {

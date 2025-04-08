@@ -12,11 +12,10 @@ BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 or implied. See the Licenses for the specific language governing
 permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy.Commands;
 using MCGalaxy.Commands.Chatting;
 
-namespace MCGalaxy {
+namespace MCGalaxy
+{
     public static class ChatModes {
         
         public static bool Handle(Player p, string text) {

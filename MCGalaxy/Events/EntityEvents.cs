@@ -16,9 +16,9 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 
-namespace MCGalaxy.Events.EntityEvents {
+namespace MCGalaxy.Events.EntityEvents
+{
 
     public delegate void OnTabListEntryAdded(Entity e, ref string tabName, ref string tabGroup, Player dst);
     /// <summary> Called when a tab list entry is being sent to a user. </summary>

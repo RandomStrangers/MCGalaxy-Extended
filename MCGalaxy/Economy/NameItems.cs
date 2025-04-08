@@ -15,10 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-
-namespace MCGalaxy.Eco 
-{    
+namespace MCGalaxy.Eco
+{
     public sealed class TitleItem : SimpleItem 
     {    
         public TitleItem() {

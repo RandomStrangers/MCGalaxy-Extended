@@ -16,9 +16,9 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using MCGalaxy.Commands;
 
-namespace MCGalaxy.Core {
+namespace MCGalaxy.Core
+{
     internal static class ConnectHandler {
         
         internal static void HandleConnect(Player p) {

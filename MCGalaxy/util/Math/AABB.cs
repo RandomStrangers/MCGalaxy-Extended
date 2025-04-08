@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Blocks;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Maths 
-{   
+namespace MCGalaxy.Maths
+{
     public struct AABB 
     {      
         /// <summary> Fixed-point min coordinate of this bounding box. </summary>
@@ -101,7 +100,7 @@ namespace MCGalaxy.Maths
                 BlockID block = lvl.GetBlock((ushort)x, (ushort)y, (ushort)z);
                 
                 AABB blockBB = lvl.blockAABBs[block].Offset(x * 32, y * 32, z * 32);
-                if (!AABB.Intersects(ref bb, ref blockBB)) continue;
+                if (!Intersects(ref bb, ref blockBB)) continue;
                 
                 BlockDefinition def = lvl.GetBlockDef(block);
                 if (def != null) {
@@ -130,7 +129,7 @@ namespace MCGalaxy.Maths
                 
                 blockBB.Min.X += x * 32; blockBB.Min.Y += y * 32; blockBB.Min.Z += z * 32;
                 blockBB.Max.X += x * 32; blockBB.Max.Y += y * 32; blockBB.Max.Z += z * 32;
-                if (!AABB.Intersects(ref bb, ref blockBB)) continue;
+                if (!Intersects(ref bb, ref blockBB)) continue;
                 
                 BlockDefinition def = lvl.GetBlockDef(block);
                 bool solid = false;

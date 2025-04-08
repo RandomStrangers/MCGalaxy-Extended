@@ -22,7 +22,6 @@
 ///------|        them in the sidebar!!     |------\\\
 //-------|__________________________________|-------\\
 using System;
-using System.IO;
 using MCGalaxy.Config;
 using MCGalaxy.Games;
 using MCGalaxy.Maths;

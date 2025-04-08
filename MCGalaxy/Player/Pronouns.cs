@@ -19,10 +19,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using MCGalaxy.Tasks;
 
-namespace MCGalaxy {
+namespace MCGalaxy
+{
 
     public class Pronouns {
         const string CONFIG_FILE = "properties/pronouns.properties";

@@ -15,9 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using MCGalaxy.Commands;
- 
-namespace MCGalaxy.Modules.Relay 
+
+namespace MCGalaxy.Modules.Relay
 {
     public abstract class RelayBotCmd : Command2 
     {

@@ -15,13 +15,13 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.Text;
 using MCGalaxy.Commands;
 
-namespace MCGalaxy {
-    
+namespace MCGalaxy
+{
+
     /// <summary> Encapuslates access permissions (visit or build) for a level/zone. </summary>
     public abstract class AccessController {
         

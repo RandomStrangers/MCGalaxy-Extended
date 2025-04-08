@@ -18,9 +18,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCGalaxy.Network;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public enum CpeMessageType : byte 
     {

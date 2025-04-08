@@ -15,11 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using BlockID = System.UInt16;
 using BlockRaw = System.Byte;
 
-namespace MCGalaxy.Blocks.Physics {
+namespace MCGalaxy.Blocks.Physics
+{
     public static class ActivateablePhysics {
         
         /// <summary> Activates fireworks, rockets, and TNT in 1 block radius around (x, y, z) </summary>

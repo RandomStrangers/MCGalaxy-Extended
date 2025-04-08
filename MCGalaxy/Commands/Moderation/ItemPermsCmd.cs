@@ -15,9 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System.Collections.Generic;
-
-namespace MCGalaxy.Commands.Moderation 
+namespace MCGalaxy.Commands.Moderation
 {
     public abstract class ItemPermsCmd : Command2 
     {

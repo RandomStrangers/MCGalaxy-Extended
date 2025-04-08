@@ -15,13 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace MCGalaxy.SQL 
-{    
+namespace MCGalaxy.SQL
+{
     /// <summary> Abstracts a SQL based database management system </summary>
     public abstract class IDatabaseBackend 
     {        

@@ -15,7 +15,6 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.Reflection;
 using MCGalaxy.Commands;
@@ -35,7 +34,7 @@ using MCGalaxy.Modules.Awards;
 using MCGalaxy.Maths;
 using MCGalaxy.Scripting;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public abstract partial class Command 
     {
@@ -287,7 +286,7 @@ namespace MCGalaxy
     }
 }
 
-namespace MCGalaxy.Commands 
+namespace MCGalaxy.Commands
 {
     public struct CommandPerm 
     {

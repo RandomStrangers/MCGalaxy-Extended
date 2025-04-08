@@ -78,7 +78,7 @@ namespace MCGalaxy
         public static void Spawn(Player dst, Player p) { Spawn(dst, p, p.Pos, p.Rot); }       
         public static void Spawn(Player dst, Player p, Position pos,
                                  Orientation rot, string possession = "") {
-            byte id = p == dst ? Entities.SelfID : p.id;
+            byte id = p == dst ? SelfID : p.id;
             string name = p.color + p.truename + possession;
             string skin = p.SkinName, model = p.Model;
             OnEntitySpawnedEvent.Call(p, ref name, ref skin, ref model, dst);
@@ -181,7 +181,7 @@ namespace MCGalaxy
                 if (pl.level != lvl || !pl.hasChangeModel) continue;
                 if (!pl.CanSeeEntity(e)) continue;
                 
-                byte id = (pl == e) ? Entities.SelfID : e.EntityID;
+                byte id = (pl == e) ? SelfID : e.EntityID;
                 string model = Chat.Format(m, pl, true, false);
                 
                 OnSendingModelEvent.Call(e, ref model, pl);
@@ -225,7 +225,7 @@ namespace MCGalaxy
                 if (pl.level != lvl || !pl.Supports(CpeExt.EntityProperty)) continue;
                 if (!pl.CanSeeEntity(e)) continue;
                 
-                byte id = (pl == e) ? Entities.SelfID : e.EntityID;
+                byte id = (pl == e) ? SelfID : e.EntityID;
                 pl.Send(Packet.EntityProperty(id, prop,
                                               Orientation.PackedToDegrees(angle)));
             }

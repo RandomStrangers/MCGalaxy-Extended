@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy.Games;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Blocks.Physics {
-    
+namespace MCGalaxy.Blocks.Physics
+{
+
     public static class LiquidPhysics {
         
         public static void PhysWater(Level lvl, ushort x, ushort y, ushort z, BlockID type) {

@@ -15,18 +15,17 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.IO;
 using MCGalaxy.Blocks;
 using MCGalaxy.Maths;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public static partial class Block 
     {
         public static bool Walkthrough(BlockID block) {
-            return block == Air || block == Sapling || block == Block.Snow
+            return block == Air || block == Sapling || block == Snow
                 || block == Fire || block == Rope
                 || (block >= Water && block <= StillLava)
                 || (block >= Dandelion && block <= RedMushroom);
@@ -153,7 +152,7 @@ namespace MCGalaxy
                                 def.MaxX * 2, def.MaxZ * 2, def.MaxY * 2);
             }
             
-            if (block >= Block.Extended) return new AABB(0, 0, 0, 32, 32, 32);
+            if (block >= Extended) return new AABB(0, 0, 0, 32, 32, 32);
             BlockID core = Convert(block);
             return new AABB(0, 0, 0, 32, DefaultSet.Height(core) * 2, 32);
         }        
@@ -190,27 +189,27 @@ namespace MCGalaxy
         
         /// <summary> Converts a raw/client block ID to a server block ID </summary>
         public static BlockID FromRaw(BlockID raw) {
-            return raw < CPE_COUNT ? raw : (BlockID)(raw + Block.Extended);
+            return raw < CPE_COUNT ? raw : (BlockID)(raw + Extended);
         }
         
         /// <summary> Converts a server block ID to a raw/client block ID </summary>
         /// <remarks> Undefined behaviour for physics block IDs </remarks>
         public static BlockID ToRaw(BlockID raw) {
-            return raw < CPE_COUNT ? raw : (BlockID)(raw - Block.Extended);
+            return raw < CPE_COUNT ? raw : (BlockID)(raw - Extended);
         }
         
         public static BlockID MapOldRaw(BlockID raw) {
             // old raw form was: 0 - 65 core block ids, 66 - 255 custom block ids
             // 256+ remain unchanged
-            return IsPhysicsType(raw) ? ((BlockID)(raw + Block.Extended)) : raw;
+            return IsPhysicsType(raw) ? ((BlockID)(raw + Extended)) : raw;
         }
         
         public static bool IsPhysicsType(BlockID block) {
-            return block >= Block.CPE_COUNT && block < Block.Extended;
+            return block >= CPE_COUNT && block < Extended;
         }
         
         public static bool VisuallyEquals(BlockID a, BlockID b) {
-            return Block.Convert(a) == Block.Convert(b);
+            return Convert(a) == Convert(b);
         }
     }
 }

@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Network;
 using MCGalaxy.Util;
 
-namespace MCGalaxy.Generator 
+namespace MCGalaxy.Generator
 {
     public static class HeightmapGen 
     {

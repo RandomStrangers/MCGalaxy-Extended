@@ -15,16 +15,15 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using MCGalaxy.Blocks;
 using MCGalaxy.Blocks.Extended;
 using MCGalaxy.Maths;
-using MCGalaxy.SQL;
 using MCGalaxy.Util;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.Building {
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdPortal : Command2 {
         public override string name { get { return "Portal"; } }
         public override string shortcut { get { return "o"; } }

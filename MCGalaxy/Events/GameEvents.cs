@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.Collections.Generic;
 using MCGalaxy.Games;
 
-namespace MCGalaxy.Events.GameEvents {
-    
+namespace MCGalaxy.Events.GameEvents
+{
+
     public delegate void OnStateChanged(IGame game);
     /// <summary> Raised when state of a game changed (started, stopped, round). </summary>
     public sealed class OnStateChangedEvent : IEvent<OnStateChanged> {

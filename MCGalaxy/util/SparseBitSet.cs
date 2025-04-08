@@ -15,9 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-
-namespace MCGalaxy.Util {
+namespace MCGalaxy.Util
+{
     /// <summary> Sparsely represents 1 bit of data per voxel for a 3D volume. </summary>
     /// <remarks> Typically this means 1 bit per block for a level. </remarks>
     /// <remarks> Does NOT perform any bounds checking. </remarks>

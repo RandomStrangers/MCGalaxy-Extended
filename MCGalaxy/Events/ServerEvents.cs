@@ -16,11 +16,10 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 using System.Net.Sockets;
 using MCGalaxy.Network;
 
-namespace MCGalaxy.Events.ServerEvents 
+namespace MCGalaxy.Events.ServerEvents
 {
     public delegate void OnSendingHeartbeat(Heartbeat service, ref string name);
     /// <summary> Called when a heartbeat is being sent out. </summary>

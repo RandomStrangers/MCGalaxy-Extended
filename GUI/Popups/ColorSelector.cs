@@ -2,9 +2,8 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System;
-using MCGalaxy;
 
-namespace MCGalaxy.Gui.Popups 
+namespace MCGalaxy.Gui.Popups
 {
     internal sealed partial class ColorSelector : Form 
     {

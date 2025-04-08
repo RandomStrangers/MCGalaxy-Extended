@@ -15,12 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Undo;
 using MCGalaxy.Maths;
 
-namespace MCGalaxy.Commands.Building {   
+namespace MCGalaxy.Commands.Building
+{
     public sealed class CmdRedo : Command2 {   
         public override string name { get { return "Redo"; } }
         public override string type { get { return CommandTypes.Building; } }

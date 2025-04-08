@@ -15,11 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
 
-namespace MCGalaxy.Commands.Building {    
+namespace MCGalaxy.Commands.Building
+{
     public class CmdWriteText : DrawCmd {
         public override string name { get { return "WriteText"; } }
         public override string shortcut { get { return "wrt"; } }

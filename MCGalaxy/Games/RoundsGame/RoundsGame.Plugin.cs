@@ -15,14 +15,14 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Events.LevelEvents;
 using MCGalaxy.Events.PlayerEvents;
 using MCGalaxy.Events.PlayerDBEvents;
 using MCGalaxy.Events.ServerEvents;
 using MCGalaxy.Network;
 
-namespace MCGalaxy.Games {
+namespace MCGalaxy.Games
+{
 
     public abstract partial class RoundsGame : IGame {
         

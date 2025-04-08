@@ -15,12 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     /// <summary> Represents which ranks are allowed (and which are disallowed) to use an item. </summary>
     public class ItemPerms 

@@ -20,11 +20,9 @@
  * the archive of this library for complete text of license.
 */
 
-using System;
-
 namespace Sharkbite.Irc
 {
-	public delegate void ReplyEventHandler( ReplyCode code, string message );
+    public delegate void ReplyEventHandler( ReplyCode code, string message );
 	public delegate void ErrorMessageEventHandler( ReplyCode code, string message );
 	public delegate void NickErrorEventHandler( string badNick, string reason ) ;
 	public delegate void PingEventHandler( string message );

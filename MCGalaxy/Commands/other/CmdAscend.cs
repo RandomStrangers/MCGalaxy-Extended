@@ -15,11 +15,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using MCGalaxy.Blocks;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.Misc {
+namespace MCGalaxy.Commands.Misc
+{
     public class CmdAscend : Command2 {
         public override string name { get { return "Ascend"; } }
         public override string type { get { return CommandTypes.Other; } }

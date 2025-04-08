@@ -15,11 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy.Eco;
-
-namespace MCGalaxy.Events.EconomyEvents 
-{      
+namespace MCGalaxy.Events.EconomyEvents
+{
     public delegate void OnMoneyChanged(Player p);         
     /// <summary> Raised whenever a player's online money changes. </summary>
     public sealed class OnMoneyChangedEvent : IEvent<OnMoneyChanged> 

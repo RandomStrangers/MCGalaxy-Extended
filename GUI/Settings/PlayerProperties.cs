@@ -16,11 +16,11 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using MCGalaxy.DB;
 
-namespace MCGalaxy.Gui {
+namespace MCGalaxy.Gui
+{
     public sealed class PlayerProperties {
         readonly Player p;
         string inMsg, outMsg;

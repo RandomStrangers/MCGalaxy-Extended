@@ -15,9 +15,7 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Net;
 using System.Text;
 using MCGalaxy.Config;

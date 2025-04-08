@@ -17,7 +17,6 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
 using System.Xml;
 using MCGalaxy.Network;
 //This upnp class comes from http://www.codeproject.com/Articles/27992/NAT-Traversal-with-UPnP-in-C, Modified for use with MCForge
@@ -25,7 +24,7 @@ using MCGalaxy.Network;
 //  http://www.upnp-hacks.org/upnp.html
 //  http://www.upnp-hacks.org/igd.html
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     public class UPnP
     {

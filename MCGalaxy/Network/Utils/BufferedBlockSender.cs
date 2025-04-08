@@ -15,11 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using BlockID = System.UInt16;
 using BlockRaw = System.Byte;
 
-namespace MCGalaxy.Network 
+namespace MCGalaxy.Network
 {
     /// <summary> Helper class for efficiently sending many block changes. </summary>
     /// <remarks> Sends block changes as either a single CPE BulkBlockUpdate packet,

@@ -17,11 +17,11 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using BlockID = System.UInt16;
 using MCGalaxy.Maths;
 
-namespace MCGalaxy.Commands.Fun {
+namespace MCGalaxy.Commands.Fun
+{
     public sealed class CmdExplode : Command2 {
         public override string name { get { return "Explode"; } }
         public override string shortcut { get { return "ex"; } }

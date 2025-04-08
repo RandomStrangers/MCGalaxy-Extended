@@ -15,11 +15,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using MCGalaxy.Games;
-
 namespace MCGalaxy.Modules.Games.Countdown
-{   
+{
     /// <summary> Generates a map for countdown </summary>
     public static class CountdownMapGen 
     {     

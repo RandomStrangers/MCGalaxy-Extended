@@ -29,7 +29,7 @@ namespace MCGalaxy
     {
         static void LoadMainLevel(SchedulerTask task) {
             try {
-                mainLevel = LevelActions.Load(Player.Console, Server.Config.MainLevel, false);
+                mainLevel = LevelActions.Load(Player.Console, Config.MainLevel, false);
                 if (mainLevel == null) GenerateMain();
             } catch (Exception ex) {
                 Logger.LogError("Error loading main level", ex);
@@ -38,7 +38,7 @@ namespace MCGalaxy
         
         static void GenerateMain() {
             Logger.Log(LogType.SystemActivity, "main level not found, generating..");
-            mainLevel = new Level(Server.Config.MainLevel, 128, 64, 128);
+            mainLevel = new Level(Config.MainLevel, 128, 64, 128);
             
             MapGen.Find("Flat").Generate(Player.Console, mainLevel, "");
             mainLevel.Save();
@@ -88,7 +88,7 @@ namespace MCGalaxy
             List<string> maps = AutoloadMaps.AllNames();
             
             foreach (string map in maps) {
-                if (map.CaselessEq(Server.Config.MainLevel)) continue;
+                if (map.CaselessEq(Config.MainLevel)) continue;
                 LevelActions.Load(Player.Console, map, false);
             }
         }
@@ -96,11 +96,11 @@ namespace MCGalaxy
         static void SetupSocket(SchedulerTask task) {        
             IPAddress ip;
             
-            if (!IPAddress.TryParse(Server.Config.ListenIP, out ip)) {
+            if (!IPAddress.TryParse(Config.ListenIP, out ip)) {
                 Logger.Log(LogType.Warning, "Unable to parse listen IP config key, listening on any IP");
                 ip = IPAddress.Any;
             }            
-            Listener.Listen(ip, Server.Config.Port);
+            Listener.Listen(ip, Config.Port);
         }
         
         static void InitHeartbeat(SchedulerTask task) {
@@ -108,10 +108,10 @@ namespace MCGalaxy
         }
         
         static void InitTimers(SchedulerTask task) {
-            MainScheduler.QueueRepeat(RandomMessage, null, 
-                                      Server.Config.AnnouncementInterval);
+            MainScheduler.QueueRepeat(RandomMessage, null,
+                                      Config.AnnouncementInterval);
             Critical.QueueRepeat(ServerTasks.UpdateEntityPositions, null,
-                                 TimeSpan.FromMilliseconds(Server.Config.PositionUpdateInterval));
+                                 TimeSpan.FromMilliseconds(Config.PositionUpdateInterval));
         }
         
         static void InitRest(SchedulerTask task) {

@@ -17,9 +17,8 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
 */
-using System;
-
-namespace MCGalaxy.Commands.World {   
+namespace MCGalaxy.Commands.World
+{
     public class CmdCopyLvl : Command2 {        
         public override string name { get { return "CopyLvl"; } }
         public override string type { get { return CommandTypes.World; } }

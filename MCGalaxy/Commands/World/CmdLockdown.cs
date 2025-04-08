@@ -15,10 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System.IO;
-using System.Threading;
-namespace MCGalaxy.Commands.World {
-    
+namespace MCGalaxy.Commands.World
+{
+
     public sealed class CmdLockdown : Command2 {
         public override string name { get { return "Lockdown"; } }
         public override string shortcut { get { return "ld"; } }

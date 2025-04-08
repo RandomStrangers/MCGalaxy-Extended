@@ -25,9 +25,8 @@ Ideas, concepts, and code were used from the following two sources:
 
  */
 using System;
-using MCGalaxy.Generator.Classic;
 
-namespace MCGalaxy.Generator.Foliage 
+namespace MCGalaxy.Generator.Foliage
 {
     public sealed class CactusTree : Tree 
     {

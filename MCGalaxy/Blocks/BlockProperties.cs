@@ -15,12 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.IO;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Blocks {
-    
+namespace MCGalaxy.Blocks
+{
+
     /// <summary> Type of animal this block behaves as. </summary>
     public enum AnimalAI : byte {
         None, Fly, FleeAir, KillerAir, FleeWater, KillerWater, FleeLava, KillerLava,

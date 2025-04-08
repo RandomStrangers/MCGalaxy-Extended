@@ -20,11 +20,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using MCGalaxy.DB;
-using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.Moderation {
-    
+namespace MCGalaxy.Commands.Moderation
+{
+
     /// <summary> Provides common helper methods for moderation commands. </summary>
     public static class ModActionCmd {
         

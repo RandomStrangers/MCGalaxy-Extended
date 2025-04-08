@@ -20,9 +20,9 @@ using System.Collections.Generic;
 using MCGalaxy.Drawing.Brushes;
 using MCGalaxy.Drawing.Ops;
 using MCGalaxy.Maths;
-using BlockID = System.UInt16;
 
-namespace MCGalaxy.Generator.Foliage {
+namespace MCGalaxy.Generator.Foliage
+{
     public sealed class AshTree : Tree {
         
         int branchBaseHeight, branchAmount;

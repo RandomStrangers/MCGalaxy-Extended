@@ -16,13 +16,13 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.Collections.Generic;
 using System.Net;
 using MCGalaxy.Config;
 using MCGalaxy.Network;
 using MCGalaxy.Util;
 
-namespace MCGalaxy.Commands.Moderation {
+namespace MCGalaxy.Commands.Moderation
+{
     public class CmdLocation : Command2 {
         public override string name { get { return "Location"; } }
         public override string shortcut { get { return "GeoIP"; } }

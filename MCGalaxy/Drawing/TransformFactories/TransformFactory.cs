@@ -15,12 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
-using MCGalaxy.Commands;
-using MCGalaxy.Drawing.Ops;
 
-namespace MCGalaxy.Drawing.Transforms {
+namespace MCGalaxy.Drawing.Transforms
+{
     public abstract class TransformFactory {
         
         /// <summary> Human friendly name of this transform. </summary>

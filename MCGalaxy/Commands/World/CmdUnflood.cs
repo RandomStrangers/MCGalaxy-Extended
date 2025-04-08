@@ -15,10 +15,10 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Commands.World {
+namespace MCGalaxy.Commands.World
+{
     public sealed class CmdUnflood : Command2 {
         public override string name { get { return "Unflood"; } }
         public override string type { get { return CommandTypes.World; } }
@@ -38,7 +38,7 @@ namespace MCGalaxy.Commands.World {
             lvl.PhysicsPaused = true;
             
             try {
-                Command cmd = Command.Find("ReplaceAll");
+                Command cmd = Find("ReplaceAll");
                 string args = !message.CaselessEq("all") ? message :
                     "8 10 lavafall waterfall lava_fast active_hot_lava active_cold_water fast_hot_lava magma geyser";
                 cmd.Use(p, args + " air", data);

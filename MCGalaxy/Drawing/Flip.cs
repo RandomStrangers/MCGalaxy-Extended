@@ -15,11 +15,9 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
-using System.IO;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy.Drawing 
+namespace MCGalaxy.Drawing
 {
     /// <summary> Utility methods for rotating and mirroring a CopyState. </summary>
     public static class Flip 

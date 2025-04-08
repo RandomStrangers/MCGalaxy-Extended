@@ -19,12 +19,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MCGalaxy.Config;
-using MCGalaxy.Games;
 using MCGalaxy.Modules.Games.ZS;
 using MCGalaxy.Network;
 using BlockID = System.UInt16;
 
-namespace MCGalaxy 
+namespace MCGalaxy
 {
     class ConfigEnvIntAttribute : ConfigIntegerAttribute 
     {

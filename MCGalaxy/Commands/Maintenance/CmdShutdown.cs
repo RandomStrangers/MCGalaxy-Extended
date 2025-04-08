@@ -18,11 +18,10 @@
     permissions and limitations under the Licenses.
  */
 using System;
-using System.IO;
-using System.Threading;
 using MCGalaxy.Tasks;
 
-namespace MCGalaxy.Commands.Maintenance {
+namespace MCGalaxy.Commands.Maintenance
+{
     public sealed class CmdShutdown : Command2 {
         public override string name { get { return "Shutdown"; } }
         public override string type { get { return CommandTypes.Moderation; } }

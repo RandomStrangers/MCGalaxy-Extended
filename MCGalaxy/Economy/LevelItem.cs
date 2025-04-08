@@ -15,13 +15,12 @@
     or implied. See the Licenses for the specific language governing
     permissions and limitations under the Licenses.
  */
-using System;
 using System.Collections.Generic;
 using MCGalaxy.Commands;
 using MCGalaxy.Generator;
 
-namespace MCGalaxy.Eco 
-{    
+namespace MCGalaxy.Eco
+{
     public sealed class LevelItem : Item 
     {    
         public LevelItem() {
