@@ -16,7 +16,7 @@ jobs:
 # ============== .NET 2.0 BUILD =============
 # ===========================================
   build-mono2:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
       - name: Compile MCGalaxy using mono
@@ -49,7 +49,7 @@ jobs:
 # ============== .NET 4.0 BUILD =============
 # ===========================================
   build-mono4:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
       - name: Compile MCGalaxy using mono
@@ -97,7 +97,7 @@ jobs:
 # ============== .NET 6.0 BUILD =============
 # ===========================================
   build-dotnet6:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     
     steps:
       - uses: actions/checkout@v4
@@ -168,7 +168,7 @@ jobs:
 # ============== .NET 8.0 BUILD =============
 # ===========================================
   build-dotnet8:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     
     steps:
       - uses: actions/checkout@v4
