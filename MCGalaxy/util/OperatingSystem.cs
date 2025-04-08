@@ -19,7 +19,9 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-
+#if MCG_STANDALONE
+using System.Reflection;
+#endif
 namespace MCGalaxy.Platform
 {
     /// <summary> Summarises resource usage of all CPU cores in the system </summary>
