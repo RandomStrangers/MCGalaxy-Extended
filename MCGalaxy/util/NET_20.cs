@@ -16,6 +16,9 @@
     permissions and limitations under the Licenses.
  */
 #if NET_20
+using System;
+using System.Threading;
+
 namespace System.Runtime.CompilerServices 
 {
     [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method)]

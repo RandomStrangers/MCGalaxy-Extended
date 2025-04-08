@@ -16,7 +16,12 @@
     permissions and limitations under the Licenses.
  */
 using System.Reflection;
-
+#if MCG_DOTNET
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.InteropServices;
+#endif
 namespace MCGalaxy.Platform
 {
 #if !MCG_DOTNET
